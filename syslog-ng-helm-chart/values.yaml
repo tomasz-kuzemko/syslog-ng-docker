@@ -76,10 +76,12 @@ securityContext: {}
 service:
   type: ClusterIP
   # use externalip for a pre routede exter al ip.
-  # TO-DO: LoadBalancer
   # type: externalip
   # externalIPs: 
   #   - 10.205.212.12
+  #
+  # type: LoadBalancer
+  # externalTrafficPolicy: Local
 
 
 resources: {}
