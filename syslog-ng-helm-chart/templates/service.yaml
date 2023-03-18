@@ -21,6 +21,9 @@ spec:
   {{- with .Values.service.externalTrafficPolicy }}
   externalTrafficPolicy: {{ . }}
   {{- end }}
+  {{- with .Values.service.loadBalancerIP }}
+  loadBalancerIP: {{ . }}
+  {{- end }}
   {{- end }}
   {{- end }}
   ports:
@@ -54,6 +57,9 @@ spec:
   type: {{ .Values.service.type }}
   {{- with .Values.service.externalTrafficPolicy }}
   externalTrafficPolicy: {{ . }}
+  {{- end }}
+  {{- with .Values.service.loadBalancerIP }}
+  loadBalancerIP: {{ . }}
   {{- end }}
   ports:
     - name: tcp-port
